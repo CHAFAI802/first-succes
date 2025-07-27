@@ -1,0 +1,171 @@
+{% extends "base.html" %}
+{% load static %}
+{% include "parts/header.html" %}
+
+{% block content %}
+
+
+
+<body class="buy-tickets-page">
+
+  
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background" style="background-image: url('{% static "assets/img/events/showcase-9.webp"%}');">
+      <div class="container position-relative">
+        <h1>Buy Tickets</h1>
+        <p>Esse dolorum voluptatum ullam est sint nemo et est ipsa porro placeat quibusdam quia assumenda numquam molestias.</p>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="{% url 'index'%}">Home</a></li>
+            <li class="current">Buy Tickets</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Buy Tickets Section -->
+    <section id="buy-tickets" class="buy-tickets section">
+
+      <div class="container">
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+
+            <div class="ticket-form-wrapper">
+              <div class="event-info mb-5">
+                <h3>Tech Innovation Conference 2026</h3>
+                <div class="event-details">
+                  <div class="event-meta">
+                    <span><i class="bi bi-calendar-event"></i> March 15-17, 2026</span>
+                    <span><i class="bi bi-geo-alt"></i> San Francisco Convention Center</span>
+                    <span><i class="bi bi-clock"></i> 9:00 AM - 6:00 PM</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="ticket-types">
+                <h4>Select Ticket Type</h4>
+
+                <div class="ticket-option">
+                  <input type="radio" id="early-bird" name="ticket_type" value="early-bird" checked="">
+                  <label for="early-bird" class="ticket-label">
+                    <div class="ticket-info">
+                      <div class="ticket-name">Early Bird Pass</div>
+                      <div class="ticket-description">Full access to all sessions and networking events</div>
+                      <div class="ticket-benefits">
+                        <span>✓ All conference sessions</span>
+                        <span>✓ Networking lunch</span>
+                        <span>✓ Welcome kit</span>
+                      </div>
+                    </div>
+                    <div class="ticket-price">
+                      <span class="original-price">$299</span>
+                      <span class="current-price">$199</span>
+                    </div>
+                  </label>
+                </div>
+
+                <div class="ticket-option">
+                  <input type="radio" id="standard" name="ticket_type" value="standard">
+                  <label for="standard" class="ticket-label">
+                    <div class="ticket-info">
+                      <div class="ticket-name">Standard Pass</div>
+                      <div class="ticket-description">Access to main conference sessions</div>
+                      <div class="ticket-benefits">
+                        <span>✓ All conference sessions</span>
+                        <span>✓ Welcome kit</span>
+                      </div>
+                    </div>
+                    <div class="ticket-price">
+                      <span class="current-price">$249</span>
+                    </div>
+                  </label>
+                </div>
+
+                <div class="ticket-option">
+                  <input type="radio" id="vip" name="ticket_type" value="vip">
+                  <label for="vip" class="ticket-label">
+                    <div class="ticket-info">
+                      <div class="ticket-name">VIP Pass</div>
+                      <div class="ticket-description">Premium experience with exclusive access</div>
+                      <div class="ticket-benefits">
+                        <span>✓ All conference sessions</span>
+                        <span>✓ VIP networking dinner</span>
+                        <span>✓ Premium welcome kit</span>
+                        <span>✓ Priority seating</span>
+                        <span>✓ Meet &amp; greet with speakers</span>
+                      </div>
+                    </div>
+                    <div class="ticket-price">
+                      <span class="current-price">$399</span>
+                    </div>
+                  </label>
+                </div>
+
+                <div class="ticket-option">
+                  <input type="radio" id="student" name="ticket_type" value="student">
+                  <label for="student" class="ticket-label">
+                    <div class="ticket-info">
+                      <div class="ticket-name">Student Pass</div>
+                      <div class="ticket-description">Special pricing for students with valid ID</div>
+                      <div class="ticket-benefits">
+                        <span>✓ All conference sessions</span>
+                        <span>✓ Student networking session</span>
+                        <span>✓ Digital resources</span>
+                      </div>
+                    </div>
+                    <div class="ticket-price">
+                      <span class="current-price">$99</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <form action="forms/buy-tickets.php" method="post" class="php-email-form ticket-form">
+
+                {% include "parts/buyingticket.html" %}
+
+              </form>
+
+              <div class="security-info">
+                <div class="security-badges">
+                  <div class="badge-item">
+                    <i class="bi bi-shield-check"></i>
+                    <span>Secure Payment</span>
+                  </div>
+                  <div class="badge-item">
+                    <i class="bi bi-lock"></i>
+                    <span>SSL Encrypted</span>
+                  </div>
+                  <div class="badge-item">
+                    <i class="bi bi-arrow-clockwise"></i>
+                    <span>Full Refund Available</span>
+                  </div>
+                </div>
+                <div class="payment-methods">
+                  <span class="payment-label">We Accept:</span>
+                  <div class="payment-icons">
+                    <i class="bi bi-credit-card"></i>
+                    <i class="bi bi-paypal"></i>
+                    <span class="payment-text">Visa, MasterCard, AmEx, PayPal</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Buy Tickets Section -->
+
+  </main>
+
+  
+</body>
+{% endblock %}content

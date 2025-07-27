@@ -1,0 +1,109 @@
+<div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="first_name">First Name *</label>
+                      <input type="text" name="first_name" id="first_name" class="form-control" required="">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="last_name">Last Name *</label>
+                      <input type="text" name="last_name" id="last_name" class="form-control" required="">
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="email">Email Address *</label>
+                      <input type="email" name="email" id="email" class="form-control" required="">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="phone">Phone Number</label>
+                      <input type="tel" name="phone" id="phone" class="form-control">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="company">Company/Organization</label>
+                      <input type="text" name="company" id="company" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="job_title">Job Title</label>
+                      <input type="text" name="job_title" id="job_title" class="form-control">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="quantity">Number of Tickets</label>
+                  <select name="quantity" id="quantity" class="form-control" required="">
+                    <option value="1">1 Ticket</option>
+                    <option value="2">2 Tickets</option>
+                    <option value="3">3 Tickets</option>
+                    <option value="4">4 Tickets</option>
+                    <option value="5">5 Tickets</option>
+                    <option value="more">More than 5 (Contact us)</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="dietary">Dietary Restrictions (Optional)</label>
+                  <textarea name="dietary" id="dietary" rows="3" class="form-control" placeholder="Please specify any dietary restrictions or food allergies"></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label for="special_requests">Special Requests (Optional)</label>
+                  <textarea name="special_requests" id="special_requests" rows="3" class="form-control" placeholder="Any special accommodation requests or additional information"></textarea>
+                </div>
+
+                <div class="pricing-summary">
+                  <h5>Order Summary</h5>
+                  <div class="summary-row">
+                    <span>Selected Ticket:</span>
+                    <span class="ticket-name-display">Early Bird Pass</span>
+                  </div>
+                  <div class="summary-row">
+                    <span>Quantity:</span>
+                    <span class="quantity-display">1</span>
+                  </div>
+                  <div class="summary-row">
+                    <span>Unit Price:</span>
+                    <span class="unit-price-display">$199</span>
+                  </div>
+                  <div class="summary-row total">
+                    <span>Total Amount:</span>
+                    <span class="total-price">$199</span>
+                  </div>
+                  <div class="tax-note">*All prices include applicable taxes and fees</div>
+                </div>
+
+                <div class="terms-checkbox">
+                  <input type="checkbox" id="terms" name="terms" required="">
+                  <label for="terms">I agree to the <a href="#" target="_blank">Terms and Conditions</a> and <a href="#" target="_blank">Privacy Policy</a> *</label>
+                </div>
+
+                <div class="newsletter-checkbox">
+                  <input type="checkbox" id="newsletter" name="newsletter">
+                  <label for="newsletter">Subscribe to our newsletter for event updates and future conferences</label>
+                </div>
+
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your ticket booking request has been submitted. You will receive a confirmation email shortly!</div>
+
+                <div class="form-submit">
+                  <button type="submit" class="btn-submit">
+                    <i class="bi bi-credit-card me-2"></i>
+                    Proceed to Payment
+                  </button>
+                </div>

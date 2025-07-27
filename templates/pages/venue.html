@@ -1,0 +1,212 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+
+{% block content %} 
+<body class="venue-page">
+
+ 
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background" style="background-image: url('{% static "assets/img/events/showcase-9.webp" %}');">
+      <div class="container position-relative">
+        <h1>Venue</h1>
+        <p>Esse dolorum voluptatum ullam est sint nemo et est ipsa porro placeat quibusdam quia assumenda numquam molestias.</p>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li class="current">Venue</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Venue 2 Section -->
+    <section id="venue-2" class="venue-2 section">
+
+      <div class="container">
+
+        <div class="row gy-5">
+
+          <div class="col-lg-6">
+            <div class="venue-image">
+              <img src="{%static 'assets/img/events/venue-1img src=.webp'%}" alt="Event Venue" class="img-fluid rounded">
+              <div class="venue-badge">
+                <i class="bi bi-geo-alt-fill"></i>
+                <span>Main Venue</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="venue-content">
+              <h3>Grand Metropolitan Conference Center</h3>
+              <div class="venue-address">
+                <i class="bi bi-geo-alt"></i>
+                <span>125 Innovation Boulevard, Chicago, IL 60601</span>
+              </div>
+
+              <p>Located in the heart of downtown Chicago, the Grand Metropolitan Conference Center offers a prestigious setting for innovative gatherings. This state-of-the-art facility spans 50,000 square feet and can accommodate up to 2,500 attendees across multiple interconnected halls.</p>
+
+              <div class="venue-features">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="feature-item">
+                      <i class="bi bi-people-fill"></i>
+                      <span>2,500 Capacity</span>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="feature-item">
+                      <i class="bi bi-wifi"></i>
+                      <span>High-Speed WiFi</span>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="feature-item">
+                      <i class="bi bi-p-square-fill"></i>
+                      <span>Valet Parking</span>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="feature-item">
+                      <i class="bi bi-universal-access"></i>
+                      <span>Fully Accessible</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="venue-actions">
+                <a href="#" class="btn btn-primary">
+                  <i class="bi bi-map"></i>
+                  Get Directions
+                </a>
+                <a href="#" class="btn btn-outline-primary">
+                  <i class="bi bi-building"></i>
+                  Nearby Hotels
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-lg-12">
+            <div class="venue-map">
+              <h4>Venue Location</h4>
+              <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2970.7736193!2d-87.6298!3d41.8781!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDUyJzQxLjIiTiA4N8KwMzknNDcuMyJX!5e0!3m2!1sen!2sus!4v1234567890123" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-5">
+
+          <div class="col-lg-4">
+            <div class="travel-info">
+              <div class="travel-icon">
+                <i class="bi bi-airplane-fill"></i>
+              </div>
+              <h5>By Air</h5>
+              <p>O'Hare International Airport is 45 minutes away. Direct shuttle service available every 30 minutes from Terminal 1.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="travel-info">
+              <div class="travel-icon">
+                <i class="bi bi-train-front-fill"></i>
+              </div>
+              <h5>By Train</h5>
+              <p>Union Station is just 8 blocks away. Take the Blue Line directly from the airport or downtown connections.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="travel-info">
+              <div class="travel-icon">
+                <i class="bi bi-car-front-fill"></i>
+              </div>
+              <h5>By Car</h5>
+              <p>Convenient access via I-90 and I-94. Complimentary valet parking available for all registered attendees.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-lg-12">
+            <div class="accommodation-section">
+              <h4>Recommended Accommodations</h4>
+              <div class="row">
+
+                <div class="col-lg-4">
+                  <div class="hotel-card">
+                    <img src="{% static 'assets/img/hotel/room-1img src=.webp'%}" alt="The Metropolitan Hotel" class="img-fluid">
+                    <div class="hotel-info">
+                      <h6>The Metropolitan Hotel</h6>
+                      <div class="hotel-distance">
+                        <i class="bi bi-geo-alt"></i>
+                        <span>0.2 miles from venue</span>
+                      </div>
+                      <div class="hotel-price">
+                        <span>From $189/night</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4">
+                  <div class="hotel-card">
+                    <img src="{% static 'assets/img/hotel/room-3img src=.webp'%}" alt="Downtown Plaza Suites" class="img-fluid">
+                    <div class="hotel-info">
+                      <h6>Downtown Plaza Suites</h6>
+                      <div class="hotel-distance">
+                        <i class="bi bi-geo-alt"></i>
+                        <span>0.5 miles from venue</span>
+                      </div>
+                      <div class="hotel-price">
+                        <span>From $159/night</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4">
+                  <div class="hotel-card">
+                    <img src="{% static 'assets/img/hotel/room-7img src=.webp'%}" alt="Business Inn Chicago" class="img-fluid">
+                    <div class="hotel-info">
+                      <h6>Business Inn Chicago</h6>
+                      <div class="hotel-distance">
+                        <i class="bi bi-geo-alt"></i>
+                        <span>0.8 miles from venue</span>
+                      </div>
+                      <div class="hotel-price">
+                        <span>From $139/night</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Venue 2 Section -->
+
+  </main>
+
+
+ 
+</body>
+
+{% endblock content%}

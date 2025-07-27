@@ -1,0 +1,162 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+<body class="tickets-page">
+
+  
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background" style="background-image: url('{%static "assets/img/events/showcase-9.webp"%}');">
+      <div class="container position-relative">
+        <h1>Tickets</h1>
+        <p>Esse dolorum voluptatum ullam est sint nemo et est ipsa porro placeat quibusdam quia assumenda numquam molestias.</p>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="{% url 'index'%}">Home</a></li>
+            <li class="current">Tickets</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Tickets Section -->
+    <section id="tickets" class="tickets section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="ticket-card">
+              <div class="ticket-header">
+                <h3>General Admission</h3>
+                <div class="ticket-price">
+                  <span class="currency">$</span>
+                  <span class="amount">149</span>
+                  <span class="period">/ticket</span>
+                </div>
+                <p class="ticket-duration">3-Day Access</p>
+              </div>
+              <div class="ticket-body">
+                <ul class="ticket-features">
+                  <li><i class="bi bi-check-circle-fill"></i>Access to all conference sessions</li>
+                  <li><i class="bi bi-check-circle-fill"></i>Welcome reception networking</li>
+                  <li><i class="bi bi-check-circle-fill"></i>Coffee breaks and lunch included</li>
+                  <li><i class="bi bi-check-circle-fill"></i>Digital conference materials</li>
+                  <li><i class="bi bi-check-circle-fill"></i>Certificate of attendance</li>
+                </ul>
+              </div>
+              <div class="ticket-footer">
+                <a href="buy-tickets.html" class="btn btn-ticket">Register Now</a>
+                <p class="availability-info">250 tickets remaining</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="ticket-card featured">
+              <div class="popular-badge">Most Popular</div>
+              <div class="ticket-header">
+                <h3>VIP Experience</h3>
+                <div class="ticket-price">
+                  <span class="currency">$</span>
+                  <span class="amount">299</span>
+                  <span class="period">/ticket</span>
+                </div>
+                <p class="ticket-duration">3-Day Premium Access</p>
+              </div>
+              <div class="ticket-body">
+                <ul class="ticket-features">
+                  <li><i class="bi bi-check-circle-fill"></i>All General Admission benefits</li>
+                  <li><i class="bi bi-check-circle-fill"></i>Reserved front row seating</li>
+                  <li><i class="bi bi-check-circle-fill"></i>Exclusive VIP networking lounge</li>
+                  <li><i class="bi bi-check-circle-fill"></i>Meet &amp; greet with keynote speakers</li>
+                  <li><i class="bi bi-check-circle-fill"></i>Premium swag bag worth $150</li>
+                  <li><i class="bi bi-check-circle-fill"></i>Private dinner with industry leaders</li>
+                </ul>
+              </div>
+              <div class="ticket-footer">
+                <a href="{% url 'buy-tickets'%}" class="btn btn-ticket">Get VIP Access</a>
+                <p class="availability-info">Limited to 50 attendees</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="ticket-card">
+              <div class="ticket-header">
+                <h3>Student Pass</h3>
+                <div class="ticket-price">
+                  <span class="original-price">$149</span>
+                  <span class="currency">$</span>
+                  <span class="amount">79</span>
+                  <span class="period">/ticket</span>
+                </div>
+                <p class="ticket-duration">3-Day Student Access</p>
+              </div>
+              <div class="ticket-body">
+                <ul class="ticket-features">
+                  <li><i class="bi bi-check-circle-fill"></i>All conference sessions access</li>
+                  <li><i class="bi bi-check-circle-fill"></i>Student networking events</li>
+                  <li><i class="bi bi-check-circle-fill"></i>Career fair participation</li>
+                  <li><i class="bi bi-check-circle-fill"></i>Mentorship program eligibility</li>
+                  <li><i class="bi bi-check-circle-fill"></i>Student resource kit</li>
+                </ul>
+              </div>
+              <div class="ticket-footer">
+                <a href="{% url 'buy-tickets'%}" class="btn btn-ticket">Student Registration</a>
+                <p class="availability-info">Valid student ID required</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-12">
+            <div class="ticket-info-bar">
+              <div class="countdown-info">
+                <h4><i class="bi bi-clock"></i> Early Bird Pricing Ends Soon!</h4>
+                <div class="countdown d-flex justify-content-center" data-count="2026/12/15">
+                  <div>
+                    <h3 class="count-days"></h3>
+                    <h4>Days</h4>
+                  </div>
+                  <div>
+                    <h3 class="count-hours"></h3>
+                    <h4>Hours</h4>
+                  </div>
+                  <div>
+                    <h3 class="count-minutes"></h3>
+                    <h4>Minutes</h4>
+                  </div>
+                  <div>
+                    <h3 class="count-seconds"></h3>
+                    <h4>Seconds</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="support-info">
+                <p><strong>Need help choosing?</strong> Contact our support team</p>
+                <a href="mailto:tickets@example.com" class="contact-link">tickets@example.com</a>
+                <span class="divider">|</span>
+                <a href="tel:+15551234567" class="contact-link">+1 (555) 123-4567</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Tickets Section -->
+
+  </main>
+
+  
+  
+</body>
+{% endblock content %}
