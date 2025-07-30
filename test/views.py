@@ -13,7 +13,8 @@ def get_schedule(request):
     return render (request ,'pages/schedule.html')
 
 def get_speakers(request):
-    return render (request ,'pages/speakers.html')
+    
+    return render (request ,'pages/speakers.html',)
 
 def get_venue(request):
     return render (request ,'pages/venue.html')

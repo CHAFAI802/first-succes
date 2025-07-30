@@ -1,5 +1,7 @@
 from django.urls import path
 from .  import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('',views.get_index,name='index'),
@@ -16,4 +18,4 @@ urlpatterns = [
     path('404',views.get_four_o_four,name='404'),
     path('contact',views.get_contact,name='contact'),
     
-]
+]+static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)
