@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from .models import Speaker
 # Create your views here.
 
 
@@ -13,8 +13,8 @@ def get_schedule(request):
     return render (request ,'pages/schedule.html')
 
 def get_speakers(request):
-    
-    return render (request ,'pages/speakers.html',)
+    speakers = Speaker.objects.all()
+    return render (request ,'pages/speakers.html',{'speakers':speakers})
 
 def get_venue(request):
     return render (request ,'pages/venue.html')
