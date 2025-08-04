@@ -1,7 +1,8 @@
 from django.urls import path
 from .  import views
 from django.conf import settings
-from django.conf.urls.static import static
+from django.conf.urls.static import static 
+
 
 urlpatterns = [
     path('',views.get_index,name='index'),
@@ -9,7 +10,7 @@ urlpatterns = [
     path('schedule',views.get_schedule,name='schedule'),
     path('speakers',views.get_speakers,name='speakers'),
     path ('venue',views.get_venue, name='venue'),
-    path('speakersdetails',views.get_speakers_details,name='speakerdetails'),
+    path('speaker/<int:speaker_id>/', views.get_speakers_details, name='speakerdetails'),
     path('tickets',views.get_tickets,name='tickets'),
     path('buy-tickets',views.get_buy_tickets,name='buy-tickets'),
     path('gallery',views.get_gallery,name='gallery'),

@@ -1,10 +1,10 @@
-from django.shortcuts import render
-from .models import Speaker
+from django.shortcuts import render,get_object_or_404
+from .models import Speaker,SpeakerDetails,Session
 # Create your views here.
 
 
 def get_index(request):
-    return render (request,'parts/index.html')
+    return render(request,'parts/index.html')
 
 def get_about(request):
     return render (request,'pages/about.html')
@@ -19,8 +19,26 @@ def get_speakers(request):
 def get_venue(request):
     return render (request ,'pages/venue.html')
 
-def get_speakers_details(request):
-    return render (request ,'pages/speaker-details.html')
+
+
+def get_speakers_details(request, speaker_id):
+    speaker = get_object_or_404(SpeakerDetails, pk=speaker_id)
+    expertise_list = speaker.get_expertise_list()
+    sessions = speaker.sessions.all()
+
+    context = {
+        'speaker': speaker,
+        'expertise_list': expertise_list,
+        'sessions': sessions,
+    }
+
+    return render(request, 'pages/speaker-detail.html', context)
+
+
+
+
+    
+
 
 def get_tickets(request):
     return render (request ,'pages/tickets.html')

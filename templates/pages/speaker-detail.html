@@ -1,0 +1,152 @@
+{% extends "base.html" %}
+{% load static %}
+{% include "parts/header.html" %}
+{% block content %}
+{% block body_class %}speakers-details-page{% endblock %}
+
+<main class="main">
+  <div class="page-title dark-background" style="background-image: url('{% static "assets/img/events/showcase-9.webp" %}');">
+    <div class="container position-relative">
+      <h1>{{ speaker.full_name }}</h1>
+      <p>{{ speaker.quote }}</p>
+      <nav class="breadcrumbs">
+        <ol>
+          <li><a href="{% url 'index' %}">Home</a></li>
+          <li class="current">{{ speaker.full_name }}</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <section id="speaker-details-2" class="speaker-details-2 section">
+    <div class="container">
+      <div class="row">
+
+        <!-- Profile -->
+        <div class="col-xl-4 col-lg-5">
+          <div class="speaker-profile-card">
+            <div class="profile-image-wrapper">
+              <img src="{{ speaker.image.url }}" alt="{{ speaker.full_name }}" class="img-fluid">
+              <div class="speaker-status">
+                <span class="status-badge keynote">
+                  <i class="bi bi-mic"></i>
+                  Keynote
+                </span>
+              </div>
+            </div>
+
+            <div class="profile-content">
+              <h2 class="speaker-name">{{ speaker.full_name }}</h2>
+              <p class="speaker-title">{{ speaker.title }}</p>
+              <div class="speaker-company">
+                <i class="bi bi-briefcase"></i>
+                {{ speaker.company }}
+              </div>
+
+              <div class="connection-stats">
+                <div class="stat-item">
+                  <span class="stat-number">{{ speaker.years_experience }}</span>
+                  <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">{{ speaker.sessions_count }}</span>
+                  <span class="stat-label">Sessions</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">{{ speaker.companies_advised }}</span>
+                  <span class="stat-label">Companies Advised</span>
+                </div>
+              </div>
+
+              <div class="social-connections">
+                {% if speaker.linkedin_url %}
+                  <a href="{{ speaker.linkedin_url }}" class="social-btn linkedin" target="_blank">
+                    <i class="bi bi-linkedin"></i><span>Connect</span>
+                  </a>
+                {% endif %}
+                {% if speaker.twitter_url %}
+                  <a href="{{ speaker.twitter_url }}" class="social-btn twitter" target="_blank">
+                    <i class="bi bi-twitter-x"></i><span>Follow</span>
+                  </a>
+                {% endif %}
+                {% if speaker.website_url %}
+                  <a href="{{ speaker.website_url }}" class="social-btn website" target="_blank">
+                    <i class="bi bi-globe"></i><span>Website</span>
+                  </a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Biography + Sessions -->
+        <div class="col-xl-8 col-lg-7">
+
+          <div class="speaker-highlight">
+            <div class="quote-container">
+              <div class="quote-icon"><i class="bi bi-chat-quote"></i></div>
+              <blockquote>{{ speaker.quote }}</blockquote>
+            </div>
+          </div>
+
+          <div class="speaker-biography">
+            <div class="section-header">
+              <h3>Speaker Biography</h3>
+              <div class="header-line"></div>
+            </div>
+            <div class="bio-content">
+              <p>{{ speaker.biography }}</p>
+              {% if expertise_list %}
+              <div class="expertise-areas">
+                <h4>Areas of Expertise</h4>
+                <div class="tags-list">
+                  {% for area in expertise_list %}
+                    <span class="expertise-tag">{{ area }}</span>
+                  {% endfor %}
+                </div>
+              </div>
+              {% endif %}
+            </div>
+          </div>
+
+          <div class="session-schedule">
+            <div class="section-header">
+              <h3>Speaking Schedule</h3>
+              <div class="header-line"></div>
+            </div>
+            <div class="schedule-timeline">
+              {% for session in sessions %}
+              <div class="timeline-item">
+                <div class="timeline-marker">
+                  <div class="marker-dot {{ session.session_type|lower }}"></div>
+                </div>
+                <div class="timeline-content">
+                  <div class="session-tag {{ session.session_type|lower }}">{{ session.session_type }}</div>
+                  <h4 class="session-name">{{ session.name }}</h4>
+                  <div class="session-meta-grid">
+                    <div class="meta-item"><i class="bi bi-calendar-event"></i><span>{{ session.date }}</span></div>
+                    <div class="meta-item"><i class="bi bi-clock"></i><span>{{ session.time }}</span></div>
+                    <div class="meta-item"><i class="bi bi-geo-alt"></i><span>{{ session.location }}</span></div>
+                    <div class="meta-item"><i class="bi bi-people"></i><span>{{ session.attendees }} Participants</span></div>
+                  </div>
+                  <p class="session-summary">{{ session.summary }}</p>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+
+          <div class="speaker-cta">
+            <div class="cta-buttons">
+              <a href="#" class="btn-primary"><i class="bi bi-calendar-plus"></i> Add to My Schedule</a>
+              <a href="{% url 'index' %}" class="btn-secondary"><i class="bi bi-arrow-left"></i> All Speakers</a>
+              <a href="#" class="btn-outline"><i class="bi bi-share"></i> Share Profile</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock content %}

@@ -57,13 +57,14 @@ ROOT_URLCONF = 'project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'templates')],
+        'DIRS': [BASE_DIR/"templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'test.context_processors.featured_speaker_context',
             ],
         },
     },
@@ -136,7 +137,7 @@ STATICFILES_DIRS = [
 # MEDIA FILES (uploads)
 #-----------------------------
 MEDIA_URL ='/media/'
-MEDIA_ROOT =BASE_DIR/'media'
+MEDIA_ROOT =BASE_DIR/'media/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
