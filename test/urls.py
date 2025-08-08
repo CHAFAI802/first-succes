@@ -18,5 +18,6 @@ urlpatterns = [
     path('privacy',views.get_privacy,name='privacy'),
     path('404',views.get_four_o_four,name='404'),
     path('contact',views.get_contact,name='contact'),
+    path('receipt/<int:ticket_id>',views.download_receipt,name='download-receipt')
     
 ]+static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)
